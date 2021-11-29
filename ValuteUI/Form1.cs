@@ -16,6 +16,10 @@ namespace ValuteUI
             txtBoxResult.Text += $"Резульат на {infos.Date.ToString("dd.MM.yyyy")}.\n";
             var currents = infos.Valute.GetAllValuteInformation();
             var current = Controller.PrintInfo(button.Text, currents);
+            if (checkBoxClear.Checked)
+            {
+                txtBoxResult.Text = string.Empty;
+            }
             foreach (var item in current)
             {
                 txtBoxResult.Text += $"{item.Key}: {item.Value}\n";

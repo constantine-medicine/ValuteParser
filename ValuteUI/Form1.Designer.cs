@@ -42,6 +42,7 @@
             this.btn8 = new System.Windows.Forms.Button();
             this.btn9 = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.checkBoxClear = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // txtBoxResult
@@ -172,12 +173,24 @@
             this.btn9.Click += new System.EventHandler(this.btnGetResult_Click);
             this.btn9.MouseHover += new System.EventHandler(this.btn_MouseHover);
             // 
+            // checkBoxClear
+            // 
+            this.checkBoxClear.AutoSize = true;
+            this.checkBoxClear.ForeColor = System.Drawing.Color.Yellow;
+            this.checkBoxClear.Location = new System.Drawing.Point(68, 61);
+            this.checkBoxClear.Name = "checkBoxClear";
+            this.checkBoxClear.Size = new System.Drawing.Size(156, 26);
+            this.checkBoxClear.TabIndex = 14;
+            this.checkBoxClear.Text = "Авто-очистка";
+            this.checkBoxClear.UseVisualStyleBackColor = true;
+            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(808, 329);
+            this.Controls.Add(this.checkBoxClear);
             this.Controls.Add(this.btn9);
             this.Controls.Add(this.btn8);
             this.Controls.Add(this.btn7);
@@ -196,6 +209,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Курсы валют";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -212,5 +226,6 @@
         private Button btn8;
         private Button btn9;
         private ToolTip toolTip1;
+        private CheckBox checkBoxClear;
     }
 }
