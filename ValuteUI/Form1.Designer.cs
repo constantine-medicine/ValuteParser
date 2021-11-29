@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.txtBoxResult = new System.Windows.Forms.RichTextBox();
-            this.txtBoxFullName = new System.Windows.Forms.TextBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
@@ -41,6 +41,7 @@
             this.btn7 = new System.Windows.Forms.Button();
             this.btn8 = new System.Windows.Forms.Button();
             this.btn9 = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // txtBoxResult
@@ -51,20 +52,6 @@
             this.txtBoxResult.Size = new System.Drawing.Size(558, 169);
             this.txtBoxResult.TabIndex = 2;
             this.txtBoxResult.Text = "";
-            // 
-            // txtBoxFullName
-            // 
-            this.txtBoxFullName.BackColor = System.Drawing.Color.MidnightBlue;
-            this.txtBoxFullName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBoxFullName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtBoxFullName.ForeColor = System.Drawing.Color.Yellow;
-            this.txtBoxFullName.Location = new System.Drawing.Point(12, 281);
-            this.txtBoxFullName.Multiline = true;
-            this.txtBoxFullName.Name = "txtBoxFullName";
-            this.txtBoxFullName.Size = new System.Drawing.Size(434, 31);
-            this.txtBoxFullName.TabIndex = 0;
-            this.txtBoxFullName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtBoxFullName.Visible = false;
             // 
             // btnClear
             // 
@@ -88,7 +75,6 @@
             this.btn1.Text = "USD";
             this.btn1.UseVisualStyleBackColor = true;
             this.btn1.Click += new System.EventHandler(this.btnGetResult_Click);
-            this.btn1.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             this.btn1.MouseHover += new System.EventHandler(this.btn_MouseHover);
             // 
             // btn2
@@ -100,8 +86,6 @@
             this.btn2.TabIndex = 4;
             this.btn2.Text = "EUR";
             this.btn2.UseVisualStyleBackColor = true;
-            this.btn2.Click += new System.EventHandler(this.btnGetResult_Click);
-            this.btn2.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             this.btn2.MouseHover += new System.EventHandler(this.btn_MouseHover);
             // 
             // btn3
@@ -114,7 +98,6 @@
             this.btn3.Text = "GBP";
             this.btn3.UseVisualStyleBackColor = true;
             this.btn3.Click += new System.EventHandler(this.btnGetResult_Click);
-            this.btn3.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             this.btn3.MouseHover += new System.EventHandler(this.btn_MouseHover);
             // 
             // btn4
@@ -127,7 +110,6 @@
             this.btn4.Text = "JPY";
             this.btn4.UseVisualStyleBackColor = true;
             this.btn4.Click += new System.EventHandler(this.btnGetResult_Click);
-            this.btn4.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             this.btn4.MouseHover += new System.EventHandler(this.btn_MouseHover);
             // 
             // btn5
@@ -140,7 +122,6 @@
             this.btn5.Text = "AZN";
             this.btn5.UseVisualStyleBackColor = true;
             this.btn5.Click += new System.EventHandler(this.btnGetResult_Click);
-            this.btn5.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             this.btn5.MouseHover += new System.EventHandler(this.btn_MouseHover);
             // 
             // btn6
@@ -153,7 +134,6 @@
             this.btn6.Text = "BRL";
             this.btn6.UseVisualStyleBackColor = true;
             this.btn6.Click += new System.EventHandler(this.btnGetResult_Click);
-            this.btn6.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             this.btn6.MouseHover += new System.EventHandler(this.btn_MouseHover);
             // 
             // btn7
@@ -166,7 +146,6 @@
             this.btn7.Text = "AMD";
             this.btn7.UseVisualStyleBackColor = true;
             this.btn7.Click += new System.EventHandler(this.btnGetResult_Click);
-            this.btn7.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             this.btn7.MouseHover += new System.EventHandler(this.btn_MouseHover);
             // 
             // btn8
@@ -179,7 +158,6 @@
             this.btn8.Text = "BYN";
             this.btn8.UseVisualStyleBackColor = true;
             this.btn8.Click += new System.EventHandler(this.btnGetResult_Click);
-            this.btn8.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             this.btn8.MouseHover += new System.EventHandler(this.btn_MouseHover);
             // 
             // btn9
@@ -192,7 +170,6 @@
             this.btn9.Text = "BGN";
             this.btn9.UseVisualStyleBackColor = true;
             this.btn9.Click += new System.EventHandler(this.btnGetResult_Click);
-            this.btn9.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             this.btn9.MouseHover += new System.EventHandler(this.btn_MouseHover);
             // 
             // Main
@@ -201,7 +178,6 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(808, 329);
-            this.Controls.Add(this.txtBoxFullName);
             this.Controls.Add(this.btn9);
             this.Controls.Add(this.btn8);
             this.Controls.Add(this.btn7);
@@ -220,7 +196,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Курсы валют";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -231,11 +206,11 @@
         private Button btn3;
         private Button btnClear;
         private Button btn4;
-        private TextBox txtBoxFullName;
         private Button btn5;
         private Button btn6;
         private Button btn7;
         private Button btn8;
         private Button btn9;
+        private ToolTip toolTip1;
     }
 }

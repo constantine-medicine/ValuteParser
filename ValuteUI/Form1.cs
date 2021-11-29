@@ -42,14 +42,7 @@ namespace ValuteUI
                     break;
                 }
             }
-            txtBoxFullName.Location = new Point(button.Location.X - txtBoxFullName.Size.Width, button.Location.Y);
-            txtBoxFullName.Visible = true;
-            txtBoxFullName.Text = text;
-        }
-
-        private void btn_MouseLeave(object sender, EventArgs e)
-        {
-            txtBoxFullName.Visible = false;
+            toolTip1.SetToolTip(button, text);
         }
     }
 }
